@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI1 NEWS</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Sidebar for Categories -->
+    <div class="sidebar">
+        <h3 class="text-center mt-4">Categories</h3>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="#sports">Sports</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#entertainment">Entertainment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#politics">Politics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#environment">Environment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#technology">Technology</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#health">Health</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <header class="hero-section text-center text-white py-5">
+            <div class="container">
+                <h1 class="display-4 fw-bold">AI1 NEWS</h1>
+                <p class="lead">Your one-stop destination for top headlines from around the world.</p>
+            </div>
+        </header>
+
+        <!-- Sports Section -->
+        <section id="sports" class="container my-5">
+            <h2 class="text-center mb-4 fw-bold">Sports</h2>
+            <div class="row">
+                {% for headline in sports_headlines %}
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-lg border-0">
+                            <img src="{{ headline.urlToImage or 'https://via.placeholder.com/400x200' }}" class="card-img-top" alt="{{ headline.title }}">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">{{ headline.title }}</h5>
+                                <p class="card-text text-muted">{{ headline.description or "No description available." }}</p>
+                                <a href="{{ headline.url }}" target="_blank" class="btn btn-primary btn-gradient">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Entertainment Section -->
+        <section id="entertainment" class="container my-5">
+            <h2 class="text-center mb-4 fw-bold">Entertainment</h2>
+            <div class="row">
+                {% for headline in entertainment_headlines %}
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-lg border-0">
+                            <img src="{{ headline.urlToImage or 'https://via.placeholder.com/400x200' }}" class="card-img-top" alt="{{ headline.title }}">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">{{ headline.title }}</h5>
+                                <p class="card-text text-muted">{{ headline.description or "No description available." }}</p>
+                                <a href="{{ headline.url }}" target="_blank" class="btn btn-primary btn-gradient">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Politics Section -->
+        <section id="politics" class="container my-5">
+            <h2 class="text-center mb-4 fw-bold">Politics</h2>
+            <div class="row">
+                {% for headline in politics_headlines %}
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-lg border-0">
+                            <img src="{{ headline.urlToImage or 'https://via.placeholder.com/400x200' }}" class="card-img-top" alt="{{ headline.title }}">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">{{ headline.title }}</h5>
+                                <p class="card-text text-muted">{{ headline.description or "No description available." }}</p>
+                                <a href="{{ headline.url }}" target="_blank" class="btn btn-primary btn-gradient">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Environment Section -->
+        <section id="environment" class="container my-5">
+            <h2 class="text-center mb-4 fw-bold">Environment</h2>
+            <div class="row">
+                {% for headline in environment_headlines %}
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-lg border-0">
+                            <img src="{{ headline.urlToImage or 'https://via.placeholder.com/400x200' }}" class="card-img-top" alt="{{ headline.title }}">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">{{ headline.title }}</h5>
+                                <p class="card-text text-muted">{{ headline.description or "No description available." }}</p>
+                                <a href="{{ headline.url }}" target="_blank" class="btn btn-primary btn-gradient">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section id="technology" class="container my-5">
+            <h2 class="text-center mb-4 fw-bold">Technology</h2>
+            <div class="row">
+                {% for headline in technology_headlines %}
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-lg border-0">
+                            <img src="{{ headline.urlToImage or 'https://via.placeholder.com/400x200' }}" class="card-img-top" alt="{{ headline.title }}">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">{{ headline.title }}</h5>
+                                <p class="card-text text-muted">{{ headline.description or "No description available." }}</p>
+                                <a href="{{ headline.url }}" target="_blank" class="btn btn-primary btn-gradient">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Health Section -->
+        <section id="health" class="container my-5">
+            <h2 class="text-center mb-4 fw-bold">Health</h2>
+            <div class="row">
+                {% for headline in health_headlines %}
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-lg border-0">
+                            <img src="{{ headline.urlToImage or 'https://via.placeholder.com/400x200' }}" class="card-img-top" alt="{{ headline.title }}">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">{{ headline.title }}</h5>
+                                <p class="card-text text-muted">{{ headline.description or "No description available." }}</p>
+                                <a href="{{ headline.url }}" target="_blank" class="btn btn-primary btn-gradient">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section bg-dark text-white text-center py-4">
+            <p class="mb-0">&copy; 2025 AI1 NEWS. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript for Section Highlighting -->
+    <script>
+        // Function to highlight the current section in the sidebar
+        function highlightSidebar() {
+            const sections = document.querySelectorAll('section');
+            const sidebarLinks = document.querySelectorAll('.sidebar .nav-link');
+
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    // Remove active class from all links
+                    sidebarLinks.forEach(link => link.classList.remove('current-section'));
+                    // Add active class to the current link
+                    sidebarLinks[index].classList.add('current-section');
+                }
+            });
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', highlightSidebar);
+
+        // Highlight the current section on page load
+        document.addEventListener('DOMContentLoaded', highlightSidebar);
+    </script>
+</body>
+</html>

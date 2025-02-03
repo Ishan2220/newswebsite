@@ -1,0 +1,167 @@
+/* Custom Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar .nav-link {
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link.current-section {
+    background: white;
+    color: #6a11cb; /* Purple text for contrast */
+    font-weight: 600;
+}
+
+/* Indian Flag Hover Effect */
+.sidebar .nav-link.india-link:hover {
+    background: linear-gradient(135deg, #ff9933, #ffffff, #138808);
+    color: #000; /* Black text for contrast */
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px; /* Offset for sidebar */
+    width: calc(100% - 250px);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 100px 0;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Gradient Button */
+.btn-gradient {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer-section {
+    background: #1a1a1a;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    font-family: 'Varela Round', sans-serif; /* Rounded font */
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar .nav-link {
+    font-family: 'Varela Round', sans-serif; /* Rounded font */
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link.current-section {
+    background: white;
+    color: #6a11cb; /* Purple text for contrast */
+    font-weight: 600;
+}
+
+/* Indian Flag Hover Effect */
+.sidebar .nav-link.india-link:hover {
+    background: linear-gradient(135deg, #ff9933, #ffffff, #138808);
+    color: #000; /* Black text for contrast */
+}
